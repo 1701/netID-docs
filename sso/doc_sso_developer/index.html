@@ -1094,9 +1094,10 @@ In PHP it's possible to use the package <a href="https://github.com/jumbojett/Op
 
 <span class="c1">// if the default redirect_uri is not to be used, a custom value can be set here:</span>
 <span class="c1">// $oidc-&gt;setRedirectURL(&#39;https://clientexample.org/callback&#39;);</span>
+
 <span class="c1">// then however a URL-rewrite is necessary, as for example with mod_rewrite from apache:</span>
-<span class="c1">//  RewriteEngine On</span>
-<span class="c1">//  RewriteRule &quot;^callback(.*)&quot; &quot;/client_example.php$1&quot;</span>
+<span class="c1">// RewriteEngine On</span>
+<span class="c1">// RewriteRule &quot;^callback(.*)&quot; &quot;/client_example.php$1&quot;</span>
 
 <span class="nv">$oidc</span><span class="o">-&gt;</span><span class="na">authenticate</span><span class="p">();</span>
 <span class="nv">$sub</span> <span class="o">=</span> <span class="nv">$oidc</span><span class="o">-&gt;</span><span class="na">getVerifiedClaims</span><span class="p">(</span><span class="s1">&#39;sub&#39;</span><span class="p">);</span>
